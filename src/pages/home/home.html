@@ -15,4 +15,12 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <button ion-button icon-end (click)="takePhoto($event)">
+    Take Photo
+    <ion-icon name="camera"></ion-icon>
+  </button>
+
+  <img *ngFor="let image of images" src="data:image/jpeg;base64,{{image}}">
+
 </ion-content>
